@@ -4,7 +4,7 @@ import { SessionProvider } from "next-auth/react";
 import "../styles/globals.css";
 
 export const runtime = 'experimental-edge'; 
-export const maxDuration = 50; 
+// export const maxDuration = 50; 
 export const dynamic = 'force-dynamic';
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
