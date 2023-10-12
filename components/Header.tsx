@@ -13,7 +13,7 @@ export default function Header({ photo }: { photo?: string | undefined }) {
           height={25}
         />
         <h1 className="sm:text-4xl text-2xl font-bold ml-2 tracking-tight">
-          restorePhotos.io
+          logoMaker.io
         </h1>
       </Link>
       {photo ? (
