@@ -216,7 +216,9 @@ const Home: NextPage = () => {
                 ariaLabel="rings-loading"
               />
             </div>
-          ) : !originalPhoto ? (
+          ) 
+          
+          : status === 'authenticated' && !originalPhoto ? (
             <UploadDropZone />
           ) : (
             !originalPhoto && (
