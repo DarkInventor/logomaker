@@ -17,7 +17,7 @@ import appendNewToName from '../utils/appendNewToName';
 import downloadPhoto from '../utils/downloadPhoto';
 import NSFWFilter from 'nsfw-filter';
 import va from '@vercel/analytics';
-import { useSession, signIn } from 'next-auth/react';
+// import { useSession, signIn } from 'next-auth/react';
 import useSWR from 'swr';
 import { Rings } from 'react-loader-spinner';
 
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
   const [prompt, setPrompt] = useState<string>('');
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
   // const { data, mutate } = useSWR('/api/remaining', fetcher);
-  const { data: session, status } = useSession();
+  // const { data: session, status } = useSession();
 
 
   const handleGenerateClick = async () => {
@@ -117,7 +117,6 @@ const Home: NextPage = () => {
     placeholder=" "
     value={prompt}
     onChange={(e) => setPrompt(e.target.value)}
-    // placeholder="Enter your text prompt"
     required
   />
   <button
@@ -165,7 +164,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header photo={session?.user?.image || undefined} />
+      {/* <Header photo={session?.user?.image || undefined} /> */}
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
         <a
           href="https://twitter.com/nutlope/status/1626074563481051136"
